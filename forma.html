@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Переключатели, флажки и списки</title>
+</head>
+
+<body>
+
+<form>
+
+Фамилия:
+<br>
+<input type="text" id="surname" value="Иванов">
+<br><br>
+
+<input type="button" value="Показать информацию" onclick="showInfo()">
+
+<h2>Группа переключателей</h2>
+
+<input type="radio" name="color"> Белый
+<br>
+<input type="radio" name="color"> Красный
+<br>
+<input type="radio" name="color"> Желтый
+<br>
+<input type="radio" name="color"> Зеленый
+
+<h2>Группа флажков</h2>
+
+<input type="checkbox" name="fruit"> Груша
+<br>
+<input type="checkbox" name="fruit"> Персик
+<br>
+<input type="checkbox" name="fruit"> Яблоко
+
+<h2>Раскрывающийся список</h2>
+
+<select name="country">
+    <option>Беларусь</option>
+    <option>Казахстан</option>
+    <option>Россия</option>
+    <option>Украина</option>
+</select>
+
+<h2>Обычный список</h2>
+
+<select name="countries" size="3" multiple>
+    <option>Беларусь</option>
+    <option>Казахстан</option>
+    <option selected>Россия</option>
+    <option>Украина</option>
+</select>
+
+</form>
+
+<script>
+function showInfo() {
+    let surname = document.getElementById("surname").value;
+
+    alert("Ваша фамилия: " + surname);
+}
+</script>
+
+</body>
+</html>
+
