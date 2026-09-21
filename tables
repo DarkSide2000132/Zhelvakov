@@ -25,6 +25,12 @@
     </style>
 </head>
 
+<a href="index.html">Главная</a> |
+<a href="forma.html">Переключатели и списки</a> |
+<a href="tables.html">Таблицы</a>
+
+<br><br>
+    
 <body>
 
 <h3>Таблица 1</h3>
