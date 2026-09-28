@@ -1,202 +1,240 @@
-<HTML>
+```html
+<!DOCTYPE html>
+<html>
 
-<HEAD>
+<head>
 
-<TITLE>Переключатели, флажки и списки</TITLE>
+    <meta charset="UTF-8">
 
-<SCRIPT>
+    <title>Переключатели, флажки и списки</title>
 
-function showSurname()
-{
-    var surname = document.getElementById("surname").value;
+    <script>
 
-    alert("Ваша фамилия: " + surname);
-}
+        function showSurname()
+        {
+            var surname = document.getElementById("surname").value;
 
-function showForm()
-{
-    var name = document.getElementById("name").value;
-    var age = document.getElementById("age").value;
-    var city = document.getElementById("city").value;
+            alert("Ваша фамилия: " + surname);
+        }
 
-    var hobbies = "";
 
-    if (document.getElementById("hobby1").checked)
-    {
-        hobbies = hobbies + "Ходить на БДсМ<BR>";
-    }
+        function showForm()
+        {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var city = document.getElementById("city").value;
 
-    if (document.getElementById("hobby2").checked)
-    {
-        hobbies = hobbies + "Езда в бункере<BR>";
-    }
+            var hobbies = "";
 
-    if (document.getElementById("hobby3").checked)
-    {
-        hobbies = hobbies + "Ездить к любимой<BR>";
-    }
+            if (document.getElementById("hobby1").checked)
+            {
+                hobbies = hobbies + "Ходить на БДсМ<br>";
+            }
 
-    document.getElementById("result").innerHTML =
-    "Имя: " + name + "<BR>" +
-    "Возраст: " + age + "<BR>" +
-    "Город: " + city + "<BR>" +
-    "Увлечения:<BR>" + hobbies;
-}
+            if (document.getElementById("hobby2").checked)
+            {
+                hobbies = hobbies + "Кататься в бункере<br>";
+            }
 
-</SCRIPT>
+            if (document.getElementById("hobby3").checked)
+            {
+                hobbies = hobbies + "Ездить к любимой<br>";
+            }
 
-</HEAD>
+            document.getElementById("result").innerHTML =
+                "Имя: " + name + "<br>" +
+                "Возраст: " + age + "<br>" +
+                "Город: " + city + "<br>" +
+                "Увлечения:<br>" + hobbies;
+        }
 
-<BODY>
+    </script>
 
-<a href="index.html">Главная</a> |
-<a href="forma.html">Переключатели и списки</a>
-<a href="tables.html">Таблицы</a>
+</head>
 
-<BR><BR>
 
-<FORM>
+<body>
 
-<H2>Группа переключателей</H2>
+    <a href="index.html">Главная</a> |
+    <a href="forma.html">Переключатели и списки</a> |
+    <a href="tables.html">Таблицы</a>
 
-<BR>Фамилия:
+    <br><br>
 
-<BR><INPUT TYPE="text" VALUE="Иванов" ID="surname">
 
-<INPUT TYPE="button" VALUE="Вывести фамилию"
-ONCLICK="showSurname();">
+    <form>
 
-<BR><INPUT TYPE="radio" NAME="color">Белый
+        <h2>Группа переключателей</h2>
 
-<BR><INPUT TYPE="radio" NAME="color">Красный
+        <br>Фамилия:
 
-<BR><INPUT TYPE="radio" NAME="color">Желтый
+        <br>
+        <input type="text" value="Иванов" id="surname">
 
-<BR><INPUT TYPE="radio" NAME="color">Зеленый
+        <input type="button"
+               value="Вывести фамилию"
+               onclick="showSurname();">
 
 
-<H2>Группа флажков</H2>
+        <br>
+        <input type="radio" name="color">
+        Белый
 
-<BR><INPUT TYPE="checkbox" NAME="fruit">Груша
+        <br>
+        <input type="radio" name="color">
+        Красный
 
-<BR><INPUT TYPE="checkbox" NAME="fruit">Персик
+        <br>
+        <input type="radio" name="color">
+        Желтый
 
-<BR><INPUT TYPE="checkbox" NAME="fruit">Яблоко
+        <br>
+        <input type="radio" name="color">
+        Зеленый
 
 
-<BR><BR>
+        <h2>Группа флажков</h2>
 
-<INPUT TYPE="button" VALUE="Пишите мне"
-ONCLICK="window.open('https://vk.ru/id517425695');">
+        <br>
+        <input type="checkbox" name="hobby" id="hobby1">
+        Ходить на БДсМ
 
-<BR><BR>
+        <br>
+        <input type="checkbox" name="hobby" id="hobby2">
+        Кататься в бункере
 
-<INPUT TYPE="button" VALUE="Посмотрите мои фотографии"
-ONCLICK="window.open('https://vk.ru/slobkollru');">
+        <br>
+        <input type="checkbox" name="hobby" id="hobby3">
+        Ездить к любимой
 
 
-<H2>Раскрывающийся и обычный список</H2>
+        <br><br>
 
-<TABLE>
 
-<CAPTION>
+        <input type="button"
+               value="Пишите мне"
+               onclick="window.open('https://vk.ru/id517425695');">
 
-<FONT SIZE="5">Выберите страну:</FONT>
 
-</CAPTION>
+        <br><br>
 
-<TR>
 
-<TD>
+        <input type="button"
+               value="Посмотрите мои фотографии"
+               onclick="window.open('https://vk.ru/slobkollru');">
 
-<SELECT NAME="COUNTRY">
 
-<OPTION>Беларусь
+        <h2>Раскрывающийся и обычный список</h2>
 
-<OPTION>Казахстан
 
-<OPTION>Россия
+        <table>
 
-<OPTION>Украина
+            <caption>
 
-</SELECT>
+                <font size="5">
+                    Выберите страну:
+                </font>
 
-</TD>
+            </caption>
 
-<TD>
 
-<SELECT NAME="COUNTRIES" SIZE="3" MULTIPLE>
+            <tr>
 
-<OPTION>Беларусь
+                <td>
 
-<OPTION>Казахстан
+                    <select name="COUNTRY">
 
-<OPTION SELECTED>Россия
+                        <option>Беларусь</option>
+                        <option>Казахстан</option>
+                        <option>Россия</option>
+                        <option>Украина</option>
 
-<OPTION>Украина
+                    </select>
 
-</SELECT>
+                </td>
 
-</TD>
 
-</TR>
+                <td>
 
-</TABLE>
+                    <select name="COUNTRIES"
+                            size="3"
+                            multiple>
 
+                        <option>Беларусь</option>
+                        <option>Казахстан</option>
+                        <option selected>Россия</option>
+                        <option>Украина</option>
 
-<BR>
+                    </select>
 
-<HR>
+                </td>
 
+            </tr>
 
-<H2>Анкета</H2>
+        </table>
 
-<BR>Имя:
 
-<BR><INPUT TYPE="text" ID="name">
+        <br>
 
+        <hr>
 
-<BR>Возраст:
 
-<BR><INPUT TYPE="text" ID="age">
+        <h2>Анкета</h2>
 
 
-<BR>Город:
+        <br>Имя:
 
-<BR><INPUT TYPE="text" ID="city">
+        <br>
+        <input type="text" id="name">
 
 
-<BR>Увлечения:
+        <br>Возраст:
 
-<BR><INPUT TYPE="checkbox" ID="hobby1">
+        <br>
+        <input type="text" id="age">
 
-Создавать БД
 
-<BR><INPUT TYPE="checkbox" ID="hobby2">
+        <br>Город:
 
-Тонироваться
+        <br>
+        <input type="text" id="city">
 
-<BR><INPUT TYPE="checkbox" ID="hobby3">
 
-Ездить в пгт Чукрышкино
+        <br>Увлечения:
 
 
-<BR><BR>
+        <br>
+        <input type="checkbox" id="hobby1">
+        Ходить на БДсМ
 
-<INPUT TYPE="button" VALUE="Показать анкету"
-ONCLICK="showForm();">
+        <br>
+        <input type="checkbox" id="hobby2">
+        Кататься в бункере
 
+        <br>
+        <input type="checkbox" id="hobby3">
+        Ездить к любимой
 
-<BR><BR>
 
-<H2>Результат</H2>
+        <br><br>
 
-<DIV ID="result"></DIV>
 
+        <input type="button"
+               value="Показать анкету"
+               onclick="showForm();">
 
-</FORM>
 
-</BODY>
+        <br><br>
 
-</HTML>
 
+        <h2>Результат</h2>
+
+        <div id="result"></div>
+
+
+    </form>
+
+</body>
+
+</html>
+```
