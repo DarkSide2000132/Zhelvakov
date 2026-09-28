@@ -16,7 +16,12 @@ div.my_menu {
     color: black;
 }
 
+form {
+    background-color: pink;
+    color: black;
+}
+
 body {
-    text-align: justify;
-    color: pink;
+    background-color: #ffc0cb; /* или другое значение розового цвета, например, lightpink, hotpink */
+    color: #000000;            /* чёрный цвет текста */
 }
