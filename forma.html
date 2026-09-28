@@ -7,19 +7,6 @@
 
     <title>Переключатели, флажки и списки</title>
 
-
-<div class="my_menu">
-
-    <a href="index.html">Главная</a>
-    <br><br>
-
-    <a href="forma (1).html">Переключатели и списки</a>
-    <br><br>
-
-    <a href="tables.html">Таблицы</a>
-
-</div>
-
     <link rel="stylesheet" href="style.css">
 
     <script>
@@ -69,184 +56,212 @@
 
 <body>
 
-    <a href="index.html">Главная</a> |
-    <a href="forma.html">Переключатели и списки</a> |
+
+<div class="my_menu">
+
+    <a href="index.html">Главная</a>
+
+    <br><br>
+
+    <a href="forma.html">Переключатели и списки</a>
+
+    <br><br>
+
     <a href="tables.html">Таблицы</a>
+
+</div>
+
+
+<br><br>
+
+
+<form>
+
+    <h2>Группа переключателей</h2>
+
+    <br>Фамилия:
+
+    <br>
+
+    <input type="text"
+           value="Иванов"
+           id="surname">
+
+    <input type="button"
+           value="Вывести фамилию"
+           onclick="showSurname();">
+
+
+    <br>
+
+    <input type="radio" name="color">
+    Белый
+
+    <br>
+
+    <input type="radio" name="color">
+    Красный
+
+    <br>
+
+    <input type="radio" name="color">
+    Желтый
+
+    <br>
+
+    <input type="radio" name="color">
+    Зеленый
+
+
+    <h2>Группа флажков</h2>
+
+    <br>
+
+    <input type="checkbox"
+           name="hobby"
+           id="hobby1">
+
+    Ходить на БДсМ
+
+
+    <br>
+
+    <input type="checkbox"
+           name="hobby"
+           id="hobby2">
+
+    Кататься в бункере
+
+
+    <br>
+
+    <input type="checkbox"
+           name="hobby"
+           id="hobby3">
+
+    Ездить к любимой
+
 
     <br><br>
 
 
-    <form>
+    <input type="button"
+           value="Пишите мне"
+           onclick="window.open('https://vk.ru/id517425695');">
 
-        <h2>Группа переключателей</h2>
 
-        <br>Фамилия:
+    <br><br>
 
-        <br>
-        <input type="text" value="Иванов" id="surname">
 
-        <input type="button"
-               value="Вывести фамилию"
-               onclick="showSurname();">
+    <input type="button"
+           value="Посмотрите мои фотографии"
+           onclick="window.open('https://vk.ru/slobkollru');">
 
 
-        <br>
-        <input type="radio" name="color">
-        Белый
+    <h2>Раскрывающийся и обычный список</h2>
 
-        <br>
-        <input type="radio" name="color">
-        Красный
 
-        <br>
-        <input type="radio" name="color">
-        Желтый
+    <table>
 
-        <br>
-        <input type="radio" name="color">
-        Зеленый
+        <caption>
 
+            <font size="5">
+                Выберите страну:
+            </font>
 
-        <h2>Группа флажков</h2>
+        </caption>
 
-        <br>
-        <input type="checkbox" name="hobby" id="hobby1">
-        Ходить на БДсМ
 
-        <br>
-        <input type="checkbox" name="hobby" id="hobby2">
-        Кататься в бункере
+        <tr>
 
-        <br>
-        <input type="checkbox" name="hobby" id="hobby3">
-        Ездить к любимой
+            <td>
 
+                <select name="COUNTRY">
 
-        <br><br>
+                    <option>Беларусь</option>
+                    <option>Казахстан</option>
+                    <option>Россия</option>
+                    <option>Украина</option>
 
+                </select>
 
-        <input type="button"
-               value="Пишите мне"
-               onclick="window.open('https://vk.ru/id517425695');">
+            </td>
 
 
-        <br><br>
+            <td>
 
+                <select name="COUNTRIES"
+                        size="3"
+                        multiple>
 
-        <input type="button"
-               value="Посмотрите мои фотографии"
-               onclick="window.open('https://vk.ru/slobkollru');">
+                    <option>Беларусь</option>
+                    <option>Казахстан</option>
+                    <option selected>Россия</option>
+                    <option>Украина</option>
 
+                </select>
 
-        <h2>Раскрывающийся и обычный список</h2>
+            </td>
 
+        </tr>
 
-        <table>
+    </table>
 
-            <caption>
 
-                <font size="5">
-                    Выберите страну:
-                </font>
+    <br>
 
-            </caption>
+    <hr>
 
 
-            <tr>
+    <h2>Анкета</h2>
 
-                <td>
 
-                    <select name="COUNTRY">
+    <br>Имя:
 
-                        <option>Беларусь</option>
-                        <option>Казахстан</option>
-                        <option>Россия</option>
-                        <option>Украина</option>
+    <br>
 
-                    </select>
+    <input type="text" id="name">
 
-                </td>
 
+    <br>Возраст:
 
-                <td>
+    <br>
 
-                    <select name="COUNTRIES"
-                            size="3"
-                            multiple>
+    <input type="text" id="age">
 
-                        <option>Беларусь</option>
-                        <option>Казахстан</option>
-                        <option selected>Россия</option>
-                        <option>Украина</option>
 
-                    </select>
+    <br>Город:
 
-                </td>
+    <br>
 
-            </tr>
+    <input type="text" id="city">
 
-        </table>
 
+    <br>Увлечения:
 
-        <br>
+    <br>
 
-        <hr>
+    Выберите увлечения выше.
 
 
-        <h2>Анкета</h2>
+    <br><br>
 
 
-        <br>Имя:
+    <input type="button"
+           value="Показать анкету"
+           onclick="showForm();">
 
-        <br>
-        <input type="text" id="name">
 
+    <br><br>
 
-        <br>Возраст:
 
-        <br>
-        <input type="text" id="age">
+    <h2>Результат</h2>
 
+    <div id="result"></div>
 
-        <br>Город:
 
-        <br>
-        <input type="text" id="city">
+</form>
 
-
-        <br>Увлечения:
-
-
-        <br>
-        <input type="checkbox" id="hobby1">
-        Ходить на БДсМ
-
-        <br>
-        <input type="checkbox" id="hobby2">
-        Кататься в бункере
-
-        <br>
-        <input type="checkbox" id="hobby3">
-        Ездить к любимой
-
-
-        <br><br>
-
-
-        <input type="button"
-               value="Показать анкету"
-               onclick="showForm();">
-
-
-        <br><br>
-
-
-        <h2>Результат</h2>
-
-        <div id="result"></div>
-
-
-    </form>
 
 </body>
 
