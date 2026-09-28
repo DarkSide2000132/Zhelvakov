@@ -1,7 +1,7 @@
 div {
     text-align: right;
     background: lightgreen;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 div.my_menu {
@@ -9,6 +9,11 @@ div.my_menu {
     width: 180px;
     background: #fff0cc;
     float: left;
+    color: black;
+}
+
+.my_menu a {
+    color: black;
 }
 
 body {
