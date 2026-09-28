@@ -21,7 +21,4 @@ form {
     color: black;
 }
 
-body {
-    background-color: #ffc0cb; /* или другое значение розового цвета, например, lightpink, hotpink */
-    color: #000000;            /* чёрный цвет текста */
-}
+body { text-align: justify; color: black; }
