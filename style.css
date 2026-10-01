@@ -1,19 +1,35 @@
-div {
-    text-align: right;
-    background: lightgreen;
+body {
+    margin: 0;
+    padding: 20px;
+    text-align: justify;
+    color: black;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+.my_menu {
+    width: 180px;
+    padding: 15px;
+    margin-right: 25px;
+    background: #fff0cc;
+    float: left;
+    text-align: left;
     font-size: 20px;
 }
 
-div.my_menu {
-    text-align: left;
-    width: 180px;
-    background: #fff0cc;
-    float: left;
+.my_menu a {
+    display: block;
+    margin-bottom: 18px;
     color: black;
+    text-decoration: none;
 }
 
-.my_menu a {
-    color: black;
+.my_menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-left: 230px;
 }
 
 form {
@@ -21,5 +37,53 @@ form {
     color: black;
 }
 
-body { text-align: justify;
-      color: black; }
+table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.table3 td {
+    width: 60px;
+    height: 25px;
+    padding: 0;
+}
+
+.table4 {
+    width: 350px;
+    height: 350px;
+    table-layout: fixed;
+}
+
+.table4 td {
+    padding: 0;
+}
+
+.c {
+    background: #00e6c7;
+}
+
+.w {
+    background: #ffffcc;
+}
+
+.r {
+    background: red;
+}
+
+.b {
+    background: blue;
+}
+
+.g {
+    background: lime;
+}
+
+.y {
+    background: yellow;
+}
