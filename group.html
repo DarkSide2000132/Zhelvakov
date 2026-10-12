@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя группа — Иван Новосёлов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="menu"></div>
+<script src="menu.js"></script>
+
+<main>
+    <h1>Моя учебная группа</h1>
+    <p>Я учусь в группе <strong>24П-1</strong> Слободского колледжа педагогики и социальных отношений.</p>
+
+    <h2>Список группы</h2>
+    <p>Нажимайте кнопку, чтобы по очереди добавлять участников группы в список. Список создаётся с помощью JavaScript.</p>
+
+    <button type="button" onclick="add_to_list()">Добавить участника в список</button>
+    <button type="button" onclick="resetList()">Начать сначала</button>
+
+    <p id="status" aria-live="polite">Добавлено участников: 0</p>
+    <ol id="list"></ol>
+
+    </main>
+
+<script>
+    // Пример списка участников учебной группы 24П-1.
+    // При необходимости замените эти фамилии на реальные.
+    var arr = ["Иван Новосёлов", "Иванов", "Петров", "Сидоров", "Смирнова", "Кузнецов"];
+    var counter = 0;
+
+    function add_to_list() {
+        if (typeof arr[counter] === "undefined") {
+            document.getElementById("status").textContent =
+                "Все участники из примера уже добавлены.";
+            return;
+        }
+
+        var list = document.getElementById("list");
+        var li = document.createElement("li");
+        li.textContent = arr[counter];
+        list.appendChild(li);
+        counter++;
+
+        document.getElementById("status").textContent =
+            "Добавлено участников: " + counter + " из " + arr.length;
+    }
+
+    function resetList() {
+        document.getElementById("list").innerHTML = "";
+        counter = 0;
+        document.getElementById("status").textContent = "Добавлено участников: 0";
+    }
+</script>
+</body>
+</html>
