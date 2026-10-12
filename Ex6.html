@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6 — степени двойки — Иван Новосёлов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="menu"></div>
+<script src="menu.js"></script>
+<main>
+    <h1>Задание 3. Таблица степеней двойки</h1>
+    <p>Таблица сформирована с помощью цикла <code>for</code>, метода <code>document.write()</code> и функции <code>Math.pow()</code>.</p>
+    <script>
+        document.write("<table><tr><th>Степень</th><th>Результат</th></tr>");
+        for (var i = 0; i <= 5; i++) {
+            document.write("<tr><td>2<sup>" + i + "</sup></td><td>" + Math.pow(2, i) + "</td></tr>");
+        }
+        document.write("</table>");
+    </script>
+</main>
+</body>
+</html>
