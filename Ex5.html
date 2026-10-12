@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5 — цикл for — Иван Новосёлов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="menu"></div>
+<script src="menu.js"></script>
+<main>
+    <h1>Задание 2. Цикл for</h1>
+    <p>Ниже выведено десять горизонтальных линий. Первая имеет длину 10 пикселей, каждая следующая длиннее на 10 пикселей.</p>
+    <div id="lines"></div>
+    <script>
+        function line(length) {
+            document.write("<hr style='width:" + length + "px; margin-left:0; border:0; border-top:2px solid black;'>");
+        }
+        // После загрузки документа добавляем линии в отдельный блок.
+        var container = document.getElementById("lines");
+        for (var i = 1; i <= 10; i++) {
+            var hr = document.createElement("hr");
+            hr.style.width = (i * 10) + "px";
+            hr.style.marginLeft = "0";
+            hr.style.border = "0";
+            hr.style.borderTop = "2px solid black";
+            container.appendChild(hr);
+        }
+    </script>
+</main>
+</body>
+</html>
