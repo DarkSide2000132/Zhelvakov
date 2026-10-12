@@ -4,5 +4,6 @@ document.getElementById("menu").innerHTML = `
         <a href="index.html">Главная</a>
         <a href="forma.html">Переключатели и списки</a>
         <a href="tables.html">Таблицы</a>
+        <a href="group.html">Моя группа </a>
     </nav>
 `;
