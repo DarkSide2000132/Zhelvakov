@@ -10,7 +10,7 @@ document.getElementById("menu").innerHTML = `
         <a href="Ex6.html">Практическая №9 — Задание 3</a>
         <a href="Ex7.html">Практическая №9 — Задание 4</a>
         <a href="Ex8.html">Практическая №9 — Задание 5</a>
-        <a href="Ex15.html">Практическая — Задание 6 (форма)</a>
-        <a href="cars.html">Автомобили (k1 + k2)</a>
+        <a href="Ex15.html">Практическая — Задание 6 </a>
+        <a href="cars.html">Автомобили</a>
     </nav>
 `;
