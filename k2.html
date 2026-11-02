@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Увеличиваем рисунки — k2.html</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bas {
+            position: relative;
+            width: 1000px;
+            margin: auto;
+            height: 450px;
+        }
+        .im {
+            position: absolute;
+            width: 300px;
+            border: 1px solid #000000;
+            z-index: 1;
+            cursor: pointer;
+        }
+        #i1 { left: 10px; top: 10px; }
+        #i2 { left: 322px; top: 10px; }
+        #i3 { left: 634px; top: 10px; }
+        #i4 { left: 10px; top: 200px; }
+        #i5 { left: 322px; top: 200px; }
+        #i6 { left: 634px; top: 200px; }
+    </style>
+</head>
+<body>
+<div id="menu"></div>
+<script src="menu.js"></script>
+
+<main>
+    <h1>Увеличение рисунков (клик)</h1>
+    <p>Кликните по автомобилю — он увеличится и переместится в центр. Повторный клик вернёт всё на место.</p>
+
+    <div class="bas">
+        <img src="cars/car1.jpg" id="i1" class="im" alt="Автомобиль 1">
+        <img src="cars/car2.jpg" id="i2" class="im" alt="Автомобиль 2">
+        <img src="cars/car3.jpg" id="i3" class="im" alt="Автомобиль 3">
+        <img src="cars/car4.jpg" id="i4" class="im" alt="Автомобиль 4">
+        <img src="cars/car5.jpg" id="i5" class="im" alt="Автомобиль 5">
+        <img src="cars/car6.jpg" id="i6" class="im" alt="Автомобиль 6">
+    </div>
+</main>
+
+<script>
+    let y = 1;
+    let w = 0;
+    let h = 0;
+
+    addEventListener("click", (ev) => {
+        let e = ev.target;
+        if (e.tagName == "IMG") {
+            let t = document.getElementById(e.id).style;
+
+            if (y == 1) {
+                let d = document.getElementById(e.id);
+                w = d.offsetLeft;
+                h = d.offsetTop;
+                y = 2;
+
+                for (let i = 1; i < 7; i++) {
+                    let b = "i" + i;
+                    if (e.id != b) {
+                        let p = document.getElementById(b).style;
+                        p.transition = "opacity 1s";
+                        p.opacity = 0;
+                    }
+                }
+
+                t.zIndex = 2;
+                t.transition = "width 1s, left 1s, top 1s";
+                t.width = "600px";
+                t.left = "200px";
+                t.top = "100px";
+            } else {
+                y = 1;
+
+                for (let i = 1; i < 7; i++) {
+                    let b = "i" + i;
+                    let p = document.getElementById(b).style;
+                    p.transition = "opacity 2s";
+                    p.opacity = 1;
+                }
+
+                t.transition = "width 1s, left 1s, top 1s";
+                t.width = "300px";
+                t.left = w + "px";
+                t.top = h + "px";
+                t.zIndex = 1;
+            }
+        }
+    });
+</script>
+</body>
+</html>
