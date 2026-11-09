@@ -12,5 +12,6 @@ document.getElementById("menu").innerHTML = `
         <a href="Ex8.html">Практическая №9 — Задание 5</a>
         <a href="Ex15.html">Практическая — Задание 6 </a>
         <a href="cars.html">Автомобили</a>
+        <a href="zadanie_9_noyabrya.html">Задание за 9 ноября</a>
     </nav>
 `;
