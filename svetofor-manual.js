@@ -29,7 +29,7 @@ function setSignal(color) {
 
     if (color == "green-blink") {
         greenLamp.classList.add("on");
-        greenLamp.classList.add("blink");   // добавляем мигание
+        greenLamp.classList.add("blink");   
         statusText.textContent = "Мигающий зелёный — заканчивай!";
     }
 
