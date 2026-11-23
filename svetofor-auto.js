@@ -6,9 +6,16 @@ var timerText = document.getElementById("timerText");
 var pauseButton = document.getElementById("pauseButton");
 var restartButton = document.getElementById("restartButton");
 
-var color = 0;      // 0 - красный, 1 - красный+жёлтый, 2 - зелёный, 3 - жёлтый
-var seconds = 5;    // сколько секунд осталось
-var paused = false; // стоит ли на паузе
+// color:
+// 0 - красный
+// 1 - красный + жёлтый
+// 2 - зелёный
+// 3 - мигающий зелёный
+// 4 - жёлтый
+
+var color = 0;
+var seconds = 5;
+var paused = false;
 
 // Показывает текущий сигнал
 function showLight() {
@@ -16,6 +23,7 @@ function showLight() {
     redLamp.classList.remove("on");
     yellowLamp.classList.remove("on");
     greenLamp.classList.remove("on");
+    greenLamp.classList.remove("blink");
 
     if (color == 0) {
         redLamp.classList.add("on");
@@ -34,6 +42,12 @@ function showLight() {
     }
 
     if (color == 3) {
+        greenLamp.classList.add("on");
+        greenLamp.classList.add("blink");   // включаем мигание
+        statusText.textContent = "Мигающий зелёный — заканчивай!";
+    }
+
+    if (color == 4) {
         yellowLamp.classList.add("on");
         statusText.textContent = "Жёлтый — приготовься!";
     }
@@ -45,7 +59,7 @@ function showLight() {
 function nextColor() {
     color = color + 1;
 
-    if (color == 4) {
+    if (color == 5) {
         color = 0;
     }
 
@@ -56,7 +70,6 @@ function nextColor() {
         seconds = 2;
     }
 }
-
 
 // Каждую секунду уменьшаем таймер
 setInterval(function () {
