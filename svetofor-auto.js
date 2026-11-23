@@ -57,27 +57,6 @@ function nextColor() {
     }
 }
 
-// Кнопка Пауза / Продолжить
-pauseButton.onclick = function () {
-    paused = !paused;
-
-    if (paused == true) {
-        pauseButton.textContent = "Продолжить";
-        timerText.textContent = "Пауза";
-    } else {
-        pauseButton.textContent = "Пауза";
-        showLight();
-    }
-};
-
-// Кнопка Сначала
-restartButton.onclick = function () {
-    color = 0;
-    seconds = 5;
-    paused = false;
-    pauseButton.textContent = "Пауза";
-    showLight();
-};
 
 // Каждую секунду уменьшаем таймер
 setInterval(function () {
