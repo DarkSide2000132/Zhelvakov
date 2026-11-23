@@ -14,5 +14,6 @@ document.getElementById("menu").innerHTML = `
         <a href="cars.html">Автомобили</a>
         <a href="zadanie_9_noyabrya.html">Задание за 9 ноября</a>
         <a href="16.11.html">16.11 — Списки и простые числа</a>
+        <a href="svetofor.html">23.11_Светофоры</a>
     </nav>
 `;
