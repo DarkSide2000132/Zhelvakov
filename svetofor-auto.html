@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Светофор (автоматический)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="traffic-light.css">
+</head>
+<body>
+
+<div id="menu"></div>
+<script src="menu.js"></script>
+
+<main>
+    <h1>Светофор (автоматический)</h1>
+
+    <div class="traffic-light">
+        <div class="lamp red" id="redLamp"></div>
+        <div class="lamp yellow" id="yellowLamp"></div>
+        <div class="lamp green" id="greenLamp"></div>
+    </div>
+
+    <div id="signalStatus">Красный — стой!</div>
+    <div id="timerText">Осталось 5 секунд</div>
+
+    <div class="traffic-controls">
+        <button id="pauseButton">Пауза</button>
+        <button id="restartButton">Сначала</button>
+    </div>
+</main>
+
+<script src="svetofor-auto.js"></script>
+</body>
+</html>

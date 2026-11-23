@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Светофор (ручной)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="traffic-light.css">
+</head>
+<body>
+
+<div id="menu"></div>
+<script src="menu.js"></script>
+
+<main>
+    <h1>Светофор (ручной)</h1>
+
+    <div class="traffic-light">
+        <div class="lamp red" id="redLamp"></div>
+        <div class="lamp yellow" id="yellowLamp"></div>
+        <div class="lamp green" id="greenLamp"></div>
+    </div>
+
+    <div id="signalStatus">Красный — стой!</div>
+
+    <div class="traffic-controls">
+        <button onclick="setSignal('red')">Красный</button>
+        <button onclick="setSignal('red-yellow')">Красный + жёлтый</button>
+        <button onclick="setSignal('green')">Зелёный</button>
+        <button onclick="setSignal('yellow')">Жёлтый</button>
+    </div>
+</main>
+
+<script src="svetofor-manual.js"></script>
+</body>
+</html>
