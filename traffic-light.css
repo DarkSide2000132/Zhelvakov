@@ -6,17 +6,6 @@
     border: 3px solid black;
 }
 
-.green.blink {
-    background: lime;
-    animation: miganie 0.5s infinite;
-}
-
-@keyframes miganie {
-    50% {
-        background: #555;
-    }
-}
-
 .lamp {
     width: 65px;
     height: 65px;
@@ -36,6 +25,18 @@
 
 .green.on {
     background: lime;
+}
+
+/* Мигание зелёного */
+.green.blink {
+    background: lime;
+    animation: miganie 0.5s infinite;
+}
+
+@keyframes miganie {
+    50% {
+        background: #555;
+    }
 }
 
 .traffic-controls {
